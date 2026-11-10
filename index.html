@@ -1044,6 +1044,49 @@ footer {
   }
 }
 
+/* フッターの折り返し調整 */
+footer .footer-description {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  line-break: strict;
+  padding: 0 8px;
+}
+
+footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 22px;
+  row-gap: 14px;
+}
+
+footer .footer-links a {
+  display: inline-block;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  flex-shrink: 0;
+}
+
+footer .footer-links a::before,
+footer .footer-links a::after {
+  content: none;
+}
+
+@media (max-width: 600px) {
+  footer .footer-description {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  footer .footer-links {
+    column-gap: 16px;
+    row-gap: 14px;
+  }
+}
+
 </style>
 </head>
 <body>
